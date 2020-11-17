@@ -4,6 +4,17 @@ import requests
 import base64
 import os
 
+def footer():
+	st.markdown("""
+	* * *
+	Built with ❤️ by [Rehan uddin](https://hardly-human.github.io/)
+	""")
+	st.success("Rehan uddin (Hardly-Human)👋😉")
+	st.markdown("### [Give Feedback](https://www.iamrehan.me/forms/feedback_form/feedback_form.html)\
+	 `            `[Report an Issue](https://www.iamrehan.me/forms/report_issue/report_issue.html)")
+
+
+
 def get_binary_file_downloader_html(bin_file, file_label='File'):
     with open(bin_file, 'rb') as f:
         data = f.read()
@@ -59,3 +70,4 @@ def main():
 
 if __name__== "__main__":
 	main()
+	footer()
