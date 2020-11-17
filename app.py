@@ -1,5 +1,15 @@
 import streamlit as st
 from PIL import Image
+import requests
+import base64
+import os
+
+def get_binary_file_downloader_html(bin_file, file_label='File'):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    bin_str = base64.b64encode(data).decode()
+    href = f'<a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename(bin_file)}">[ Download Image ]</a>'
+    return href
 
 def main():
   
@@ -33,7 +43,18 @@ def main():
 
 			color_image_url = r.json()["output_url"]
 
-	else:
+			img_data = requests.get(color_image_url).content
+			with open('toonified_image.jpg', 'wb') as handler:
+				handler.write(img_data)
+			st.success("That looks good..🎊✨")
+			toonified_image = Image.open('toonified_image.jpg')
+
+			st.subheader("Toonified Image")
+			st.image(toonified_image)
+
+			st.markdown(get_binary_file_downloader_html('toonified_image.jpg', 'Picture'), unsafe_allow_html=True)
+
+		else:
 			st.error("Please Upload Image!!!")
 
 if __name__== "__main__":
