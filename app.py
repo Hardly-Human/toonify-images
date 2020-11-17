@@ -20,6 +20,19 @@ def main():
 		image_path = "saved_image.jpg"
 		st.image(image1)
 
+	if st.button("Toonify 🎃 "):
+		if image_file is not None:
+			st.warning("Please wait.. by the way Nice picture..😊")
+			r = requests.post(
+			    "https://api.deepai.org/api/toonify",
+			    files={
+			        'image': open('saved_image.jpg', 'rb'),
+			    },
+			    headers={'api-key': 'aa48ee59-f392-4783-b1ac-ab410534ca61'}
+			)
+
+			color_image_url = r.json()["output_url"]
+
 	else:
 			st.error("Please Upload Image!!!")
 
