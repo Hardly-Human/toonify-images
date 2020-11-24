@@ -39,7 +39,7 @@ def main():
 		rgb_im = image1.convert('RGB') 
 		image = rgb_im.save("saved_image.jpg")
 		image_path = "saved_image.jpg"
-		st.image(image1)
+		st.image(image1,width = 700)
 
 	if st.button("Toonify 🎃 "):
 		if image_file is not None:
