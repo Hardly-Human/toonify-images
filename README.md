@@ -7,8 +7,8 @@ A streamlit web application that uses toonify-API to turn a photo of any face in
 
 
 ### This app has been deployed on Heroku.🥳
- **🟢Live at** [![Heroku App](https://raw.githubusercontent.com/gregsadetsky/heroku-ci-badge/master/badges/succeeded.svg)](https://toonify-images.herokuapp.com/)
- [![uptime: 100%](https://camo.githubusercontent.com/b3fc74878a0d5fcca5a78b288aa4b489f65fd7eb/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f757074696d652d3130302532352d627269676874677265656e)](https://toonify-images.herokuapp.com/)
+ **🟢Live at** [![Heroku App](https://raw.githubusercontent.com/gregsadetsky/heroku-ci-badge/master/badges/succeeded.svg)](https://toonify-image-app.herokuapp.com/)
+ [![uptime: 100%](https://camo.githubusercontent.com/b3fc74878a0d5fcca5a78b288aa4b489f65fd7eb/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f757074696d652d3130302532352d627269676874677265656e)](https://toonify-image-app.herokuapp.com/)
 [![Open Source Love png1](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/Hardly-Human)
  
 
